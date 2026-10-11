@@ -5,215 +5,581 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>外刊精读讲义库</title>
 <style>
-  :root {
-    --paper:#fbfaf8; --card:#ffffff; --ink:#15171b; --soft:#4d535c;
-    --muted:#8b929c; --rule:#e6e4df; --rule2:#f0eeea;
-    --accent:#1c4e8a; --accent-soft:#eef4fb; --red:#c62a2f;
-    --serif: Georgia, "Times New Roman", "Songti SC", "SimSun", serif;
-    --sans: -apple-system, "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
-    --shadow: 0 1px 2px rgba(20,24,30,.04), 0 8px 24px -12px rgba(20,24,30,.14);
+  :root{
+    --paper:#fbfaf8; --card:#fff; --ink:#15171b; --soft:#4d535c; --muted:#8b929c;
+    --rule:#e6e4df; --rule2:#f0eeea; --accent:#1c4e8a; --accent-soft:#eef4fb;
+    --red:#c62a2f; --ok:#1a7f45; --ok-soft:#eefaf2; --bad:#c0392b; --bad-soft:#fdf0ee;
+    --serif:Georgia,"Times New Roman","Songti SC","SimSun",serif;
+    --sans:-apple-system,"Segoe UI","Microsoft YaHei",system-ui,sans-serif;
+    --shadow:0 1px 2px rgba(20,24,30,.04),0 8px 24px -12px rgba(20,24,30,.14);
   }
-  * { box-sizing:border-box; }
-  html { -webkit-text-size-adjust:100%; }
-  body {
-    margin:0; background:var(--paper); color:var(--ink);
-    font:16px/1.75 var(--sans);
-    background-image:
-      radial-gradient(circle at 12% -8%, #eef4fb 0, transparent 42%),
-      radial-gradient(circle at 92% 0%, #fdf1ef 0, transparent 38%);
-    background-repeat:no-repeat;
-  }
-  .wrap { max-width:1080px; margin:0 auto; padding:0 28px 96px; }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.75 var(--sans);
+    background-image:radial-gradient(circle at 12% -8%,#eef4fb 0,transparent 42%),
+      radial-gradient(circle at 92% 0%,#fdf1ef 0,transparent 38%);
+    background-repeat:no-repeat}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px 96px}
+  a{color:var(--accent)}
+  code{background:#f2f0ec;border:1px solid var(--rule2);border-radius:4px;padding:1px 5px;
+    font-size:12px;font-family:ui-monospace,Consolas,monospace}
 
-  header.site { padding:56px 0 26px; border-bottom:2px solid var(--ink); }
-  .brandline { display:flex; align-items:center; gap:12px; margin-bottom:20px; }
-  .mark {
-    background:var(--red); color:#fff; font:700 11px/1 var(--sans);
-    letter-spacing:.14em; padding:7px 11px; border-radius:3px;
-  }
-  .brandline .kicker {
-    font:600 11.5px/1 var(--sans); letter-spacing:.18em;
-    text-transform:uppercase; color:var(--muted);
-  }
-  h1.title {
-    margin:0; font-family:var(--serif); font-size:clamp(34px,5.2vw,54px);
-    line-height:1.1; letter-spacing:-.015em; font-weight:700;
-  }
-  h1.title .cn {
-    display:block; font-family:var(--sans); font-size:clamp(15px,2vw,19px);
-    font-weight:500; color:var(--soft); letter-spacing:.06em; margin-top:14px;
-  }
-  .lede { margin:22px 0 0; max-width:62ch; color:var(--soft); font-size:16.5px; }
-  .stats {
-    display:flex; flex-wrap:wrap; gap:28px; margin-top:26px;
-    padding-top:18px; border-top:1px solid var(--rule);
-  }
-  .stat b { display:block; font-family:var(--serif); font-size:26px; line-height:1; font-weight:700; }
-  .stat span { font-size:12px; color:var(--muted); letter-spacing:.06em; }
+  /* ---------- masthead ---------- */
+  header.site{padding:52px 0 24px;border-bottom:2px solid var(--ink)}
+  .brandline{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+  .mark{background:var(--red);color:#fff;font:700 11px/1 var(--sans);letter-spacing:.14em;
+    padding:7px 11px;border-radius:3px}
+  .kicker{font:600 11.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;
+    color:var(--muted)}
+  h1.title{margin:0;font-family:var(--serif);font-size:clamp(32px,5vw,50px);line-height:1.1;
+    letter-spacing:-.015em}
+  h1.title .cn{display:block;font-family:var(--sans);font-size:clamp(15px,2vw,18px);
+    font-weight:500;color:var(--soft);letter-spacing:.06em;margin-top:12px}
+  .lede{margin:20px 0 0;max-width:64ch;color:var(--soft);font-size:16px}
+  .stats{display:flex;flex-wrap:wrap;gap:26px;margin-top:24px;padding-top:16px;
+    border-top:1px solid var(--rule)}
+  .stat b{display:block;font-family:var(--serif);font-size:25px;line-height:1}
+  .stat span{font-size:12px;color:var(--muted);letter-spacing:.06em}
 
-  .toolbar {
-    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
-    margin:30px 0 22px; padding-bottom:14px; border-bottom:1px solid var(--rule);
-  }
-  .toolbar .label {
-    font:600 11.5px/1 var(--sans); letter-spacing:.16em; text-transform:uppercase;
-    color:var(--muted);
-  }
-  .chips { display:flex; gap:7px; flex-wrap:wrap; }
-  .chip {
-    border:1px solid var(--rule); background:var(--card); color:var(--soft);
-    border-radius:99px; padding:5px 13px; font-size:13px; cursor:pointer;
-    font-family:inherit; transition:.16s;
-  }
-  .chip:hover { border-color:var(--accent); color:var(--accent); }
-  .chip[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+  /* ---------- library ---------- */
+  .toolbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:28px 0 20px;
+    padding-bottom:14px;border-bottom:1px solid var(--rule)}
+  .toolbar .label{font:600 11.5px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted)}
+  .chips{display:flex;gap:7px;flex-wrap:wrap}
+  .chip{border:1px solid var(--rule);background:var(--card);color:var(--soft);border-radius:99px;
+    padding:5px 13px;font-size:13px;cursor:pointer;font-family:inherit;transition:.16s}
+  .chip:hover{border-color:var(--accent);color:var(--accent)}
+  .chip[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+  .grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(370px,1fr));
+    align-items:start}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--rule);border-radius:10px;
+    padding:24px 26px 22px;box-shadow:var(--shadow);display:flex;flex-direction:column;
+    transition:transform .18s,box-shadow .18s,border-color .18s}
+  .card:hover{transform:translateY(-2px);border-color:#d5d2cb;
+    box-shadow:0 2px 4px rgba(20,24,30,.05),0 18px 40px -18px rgba(20,24,30,.24)}
+  .card-top{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-size:12px;
+    color:var(--muted);flex-wrap:wrap}
+  .no{font-family:var(--serif);color:var(--rule);font-weight:700}
+  .pub{color:var(--red);font-weight:600}
+  .sep{color:var(--rule)}
+  .card h2{margin:0 0 6px;font-family:var(--serif);font-size:22px;line-height:1.25}
+  .card .zh{margin:0 0 12px;color:var(--soft);font-size:14.5px}
+  .card .summary{margin:0 0 14px;color:var(--soft);font-size:14.5px}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+  .tag{background:var(--accent-soft);color:var(--accent);border-radius:4px;padding:2px 9px;
+    font-size:12px}
+  .actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:auto}
+  .btn{display:inline-block;padding:9px 17px;border:1px solid var(--rule);border-radius:7px;
+    text-decoration:none;color:var(--ink);font-size:13.5px;background:var(--card);cursor:pointer;
+    font-family:inherit;transition:.16s;white-space:nowrap}
+  .btn:hover{border-color:var(--accent);color:var(--accent)}
+  .btn.primary{background:var(--ink);border-color:var(--ink);color:#fff}
+  .btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+  .btn.ghost{color:var(--muted)}
+  .btn:disabled{opacity:.45;cursor:not-allowed}
 
-  .grid {
-    display:grid; gap:22px;
-    grid-template-columns:repeat(auto-fit, minmax(360px, 1fr));
-    align-items:start;
-  }
-  @media (max-width:820px) { .grid { grid-template-columns:1fr; } }
+  /* ---------- module view ---------- */
+  .crumb{font-size:13px;color:var(--muted);margin:0 0 14px}
+  .crumb a{text-decoration:none}
+  .mod-head{border-bottom:2px solid var(--ink);padding-bottom:16px;margin-bottom:0}
+  .mod-head h2{margin:0 0 6px;font-family:var(--serif);font-size:clamp(24px,3.4vw,34px)}
+  .mod-head .zh{color:var(--soft);margin:0 0 10px}
+  .mod-head .src{font-size:12.5px;color:var(--muted)}
+  .tabs{display:flex;gap:4px;flex-wrap:wrap;margin:18px 0 24px;
+    border-bottom:1px solid var(--rule);padding-bottom:0}
+  .tab{border:none;background:none;font-family:inherit;font-size:14px;color:var(--soft);
+    padding:9px 14px;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px}
+  .tab:hover{color:var(--accent)}
+  .tab[aria-selected=true]{color:var(--ink);font-weight:600;border-bottom-color:var(--accent)}
+  .tab .badge{display:inline-block;margin-left:6px;font-size:11px;color:var(--muted)}
+  section[hidden]{display:none}
+  h3.sec{font-size:15px;margin:0 0 12px;letter-spacing:.02em}
+  .note{color:var(--soft);font-size:14px;margin:0 0 18px}
 
-  .card {
-    background:var(--card); border:1px solid var(--rule); border-radius:10px;
-    padding:24px 26px 22px; box-shadow:var(--shadow);
-    display:flex; flex-direction:column;
-    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
-  }
-  .card:hover {
-    transform:translateY(-2px); border-color:#d5d2cb;
-    box-shadow:0 2px 4px rgba(20,24,30,.05), 0 18px 40px -18px rgba(20,24,30,.24);
-  }
-  .card-top { display:flex; align-items:center; gap:10px; margin-bottom:14px; font-size:12px; color:var(--muted); }
-  .no { font-family:var(--serif); font-size:13px; color:var(--rule); font-weight:700; letter-spacing:.04em; }
-  .src { display:flex; align-items:center; gap:5px; flex:1; min-width:0; flex-wrap:wrap; }
-  .src .pub { color:var(--red); font-weight:600; }
-  .sep { color:var(--rule); }
-  .pill { border:1px solid var(--rule2); background:var(--paper); border-radius:99px; padding:2px 9px; font-size:11.5px; white-space:nowrap; }
-  .pill.ok { color:var(--soft); }
-  .pill.bad { color:#fff; background:var(--red); border-color:var(--red); }
-  .card h2 { margin:0 0 6px; font-family:var(--serif); font-size:23px; line-height:1.25; letter-spacing:-.01em; font-weight:700; }
-  .card .zh { margin:0 0 14px; color:var(--soft); font-size:14.5px; }
-  .card .summary { margin:0 0 14px; color:var(--soft); font-size:14.5px; line-height:1.7; }
-  .tags { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:14px; }
-  .tag { background:var(--accent-soft); color:var(--accent); border-radius:4px; padding:2px 9px; font-size:12px; }
-  details { margin:0 0 18px; }
-  details summary { cursor:pointer; color:var(--accent); font-size:13.5px; list-style:none; }
-  details summary::-webkit-details-marker { display:none; }
-  details summary::before { content:"▸ "; }
-  details[open] summary::before { content:"▾ "; }
-  details .count { color:var(--muted); }
-  ul.secs { margin:10px 0 0; padding-left:18px; color:var(--soft); font-size:13.5px; line-height:1.9; }
-  .actions { display:flex; gap:9px; flex-wrap:wrap; margin-top:auto; }
-  .btn {
-    display:inline-block; padding:9px 17px; border:1px solid var(--rule);
-    border-radius:7px; text-decoration:none; color:var(--ink); font-size:13.5px;
-    background:var(--card); transition:.16s; white-space:nowrap;
-  }
-  .btn:hover { border-color:var(--accent); color:var(--accent); }
-  .btn.primary { background:var(--ink); border-color:var(--ink); color:#fff; }
-  .btn.primary:hover { background:var(--accent); border-color:var(--accent); }
-  .empty { border:1px dashed var(--rule); border-radius:10px; padding:40px; text-align:center; color:var(--muted); }
-  .noresult { display:none; padding:32px; text-align:center; color:var(--muted); }
-  footer.site { margin-top:44px; padding-top:20px; border-top:1px solid var(--rule); color:var(--muted); font-size:12.5px; line-height:1.9; }
-  code { background:#f2f0ec; border:1px solid var(--rule2); border-radius:4px; padding:1px 5px; font-size:12px; font-family:ui-monospace, Consolas, monospace; }
-  @media print {
-    body { background:#fff; }
-    .toolbar, .actions, footer.site { display:none; }
-    .card { break-inside:avoid; box-shadow:none; }
-  }
+  /* article */
+  .article p{margin:0 0 1.1em;font-family:var(--serif);font-size:15.5px;line-height:1.78;
+    text-align:justify}
+
+  /* vocab cards */
+  .vcards{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+  .vcard{background:var(--card);border:1px solid var(--rule);border-radius:10px;
+    padding:18px 20px;box-shadow:var(--shadow)}
+  .vcard .top{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+  .vcard .term{font-family:var(--serif);font-size:21px;font-weight:700}
+  .vcard .ipa{color:var(--muted);font-size:13px}
+  .vcard .pos{color:var(--accent);font-size:12px;background:var(--accent-soft);
+    border-radius:4px;padding:1px 7px}
+  .vcard .def{margin:10px 0 0;font-size:14.5px}
+  .vcard .quote{margin:8px 0 0;font-size:13.5px;color:var(--soft);font-style:italic}
+  .vcard .forms{margin:8px 0 0;font-size:12.5px;color:var(--muted)}
+  .vcard .zh{margin:10px 0 0;padding-top:10px;border-top:1px dashed var(--rule);font-size:14px;
+    color:var(--red);font-weight:600}
+  .vcard .zh.hidden{visibility:hidden}
+  .vcard .reveal{margin-top:10px;font-size:12.5px;background:none;border:none;
+    color:var(--accent);cursor:pointer;padding:0;font-family:inherit;text-decoration:underline}
+
+  /* quiz */
+  .q{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:18px 20px;
+    margin-bottom:14px;box-shadow:var(--shadow)}
+  .q .stem{font-size:15px;margin:0 0 12px;font-weight:600}
+  .q .opts{display:grid;gap:8px}
+  .opt{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--rule);
+    border-radius:7px;padding:9px 12px;cursor:pointer;font-size:14.5px;background:var(--card)}
+  .opt:hover{border-color:var(--accent)}
+  .opt input{margin:4px 0 0}
+  .opt.correct{border-color:var(--ok);background:var(--ok-soft)}
+  .opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+  .opt .key{color:var(--muted);font-weight:600}
+  .blank{width:104px;border:1px solid var(--rule);border-radius:6px;padding:3px 7px;
+    font:inherit;font-size:14px;background:var(--card);text-align:center}
+  .blank:focus{outline:2px solid var(--accent-soft);border-color:var(--accent)}
+  .blank.correct{border-color:var(--ok);background:var(--ok-soft)}
+  .blank.wrong{border-color:var(--bad);background:var(--bad-soft)}
+  .bank{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+  .bank .w{border:1px solid var(--rule);border-radius:6px;padding:4px 10px;font-size:13.5px;
+    background:var(--card)}
+  .bank .w .l{color:var(--muted);margin-right:5px}
+  .cloze{background:var(--card);border:1px solid var(--rule);border-radius:10px;
+    padding:20px 22px;box-shadow:var(--shadow);font-family:var(--serif);font-size:15.5px;
+    line-height:2.1;text-align:justify}
+  .cloze p{margin:0 0 1em}
+
+  /* inputs */
+  textarea{width:100%;border:1px solid var(--rule);border-radius:8px;padding:12px 14px;
+    font-family:var(--serif);font-size:15px;line-height:1.7;background:var(--card);resize:vertical}
+  textarea:focus{outline:2px solid var(--accent-soft);border-color:var(--accent)}
+  .model{background:#f6f8f6;border:1px solid var(--rule);border-left:3px solid var(--ok);
+    border-radius:8px;padding:14px 16px;font-family:var(--serif);font-size:14.5px;
+    line-height:1.75;margin-top:12px;white-space:pre-wrap}
+  .model h4{margin:0 0 8px;font-family:var(--sans);font-size:12px;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--ok)}
+
+  /* score bar */
+  .scorebar{position:sticky;bottom:0;background:rgba(251,250,248,.96);
+    backdrop-filter:blur(6px);border-top:1px solid var(--rule);padding:13px 0;margin-top:22px;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;z-index:5}
+  .score{font-family:var(--serif);font-size:20px;font-weight:700}
+  .score .small{font-family:var(--sans);font-size:12.5px;color:var(--muted);font-weight:400}
+  .bar{flex:1;min-width:120px;height:7px;background:var(--rule2);border-radius:99px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s}
+  .verdict{font-size:14px;font-weight:600}
+  .verdict.pass{color:var(--ok)}
+  .verdict.fail{color:var(--bad)}
+  .empty{border:1px dashed var(--rule);border-radius:10px;padding:40px;text-align:center;
+    color:var(--muted)}
+  footer.site{margin-top:44px;padding-top:20px;border-top:1px solid var(--rule);
+    color:var(--muted);font-size:12.5px;line-height:1.9}
+  @media print{.toolbar,.actions,.scorebar,.tabs,footer.site{display:none}
+    .card,.q,.vcard{break-inside:avoid;box-shadow:none}}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <header class="site">
-    <div class="brandline">
-      <span class="mark">CET-6</span>
-      <span class="kicker">Intensive Reading Library</span>
-    </div>
-    <h1 class="title">
-      <span>外刊精读</span>
-      <span class="cn">外刊精读讲义库</span>
-    </h1>
-    <p class="lede">把《经济学人》等外刊原文做成六级精读讲义：六级标志词表 · 原文全文 · 精读练习 · 参考答案。每份讲义都按同一套版式生成，可直接打印。</p>
-    <div class="stats">
-      <div class="stat"><b>1</b><span>份讲义</span></div>
-      <div class="stat"><b>10</b><span>个六级标志词</span></div>
-      <div class="stat"><b>3</b><span>个主题</span></div>
-    </div>
-  </header>
 
-  <div class="toolbar" id="toolbar">
-    <span class="label">主题</span>
-    <div class="chips" id="chips">
-      <button class="chip" aria-pressed="true" data-tag="">全部</button>
-      <button class="chip" aria-pressed="false" data-tag="人工智能">人工智能</button>
+  <!-- ============ LIBRARY ============ -->
+  <div id="view-library">
+    <header class="site">
+      <div class="brandline">
+        <span class="mark">CET-6</span>
+        <span class="kicker">Intensive Reading Library</span>
+      </div>
+      <h1 class="title"><span>外刊精读</span><span class="cn">外刊精读讲义库</span></h1>
+      <p class="lede">把《经济学人》等外刊原文做成六级精读讲义：六级标志词表 · 原文全文 · 精读练习 · 参考答案。每份讲义都按同一套版式生成，可直接打印。</p>
+      <div class="stats">
+        <div class="stat"><b>1</b><span>份讲义</span></div>
+        <div class="stat"><b>10</b><span>个六级标志词</span></div>
+        <div class="stat"><b>3</b><span>个主题</span></div>
+      </div>
+    </header>
+    <div class="toolbar">
+      <span class="label">主题</span>
+      <div class="chips" id="chips">
+        <button class="chip" aria-pressed="true" data-tag="">全部</button>
+        <button class="chip" aria-pressed="false" data-tag="人工智能">人工智能</button>
 <button class="chip" aria-pressed="false" data-tag="科技">科技</button>
 <button class="chip" aria-pressed="false" data-tag="科研">科研</button>
+      </div>
     </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>没有符合该主题的讲义。</p>
+    <footer class="site">
+      共 1 份讲义 · 直接在网页上背词、做题、看解析 · 也可打印 PDF
+    </footer>
   </div>
 
-  <div class="grid" id="grid"></div>
-  <p class="noresult" id="noresult">没有符合该主题的讲义。</p>
-
-  <footer class="site">
-    共 1 份讲义 · 由 .site/build_site.py 生成 · 纯静态页面，可直接托管在 GitHub Pages
-  </footer>
+  <!-- ============ MODULE ============ -->
+  <div id="view-module" hidden></div>
 </div>
 
-<script id="cards-data" type="application/json">[{"no": "01", "href": "how-ai-can-revolutionise-science.pdf", "source": "The Economist · Leaders", "page": "p. 11", "date": "2026-10-10", "title": "How AI can revolutionise science", "zh": "人工智能如何变革科学", "topic": "科技与科研", "summary": "《经济学人》社论。AI 正在进入几乎所有科学领域，但采用程度差异极大——物理学与天文学论文中 7.2% 涉及 AI，兽医学只有 1.4%。文章把 AI 与显微镜、实验室、计算机相类比，认为真正的障碍不是技术而是社会性的：取决于科研人员是否愿意并且有能力使用这些工具。", "tags": ["科技", "人工智能", "科研"], "tags_attr": "科技 人工智能 科研", "size": "250 KB", "missing": false, "sections": ["词汇表：英文释义 + 原文出处，中文列留白自测", "原文全文，两栏排版", "PART 1 词汇：看释义写单词（10 题）", "PART 2 选词填空：15 选 10", "PART 3 阅读理解：5 题", "PART 4 汉译英：段落翻译，含作答横线", "PART 5 写作：150–200 词，含作答横线", "参考答案（末页，含中文释义）"]}]</script>
+<script id="index-data" type="application/json">{"site": {"title": "外刊精读讲义库", "title_en": "外刊精读", "subtitle": "CET-6 Intensive Reading Library", "note": "把《经济学人》等外刊原文做成六级精读讲义：六级标志词表 · 原文全文 · 精读练习 · 参考答案。每份讲义都按同一套版式生成，可直接打印。"}, "modules": [{"id": "how-ai-can-revolutionise-science", "slug": "how-ai-can-revolutionise-science", "title": "How AI can revolutionise science", "zh": "人工智能如何变革科学", "source": "The Economist · Leaders", "page": "p. 11", "date": "2026-10-10", "topic": "科技与科研", "tags": ["科技", "人工智能", "科研"], "summary": "《经济学人》社论。AI 正在进入几乎所有科学领域，但采用程度差异极大——物理学与天文学论文中 7.2% 涉及 AI，兽医学只有 1.4%。文章把 AI 与显微镜、实验室、计算机相类比，认为真正的障碍不是技术而是社会性的：取决于科研人员是否愿意并且有能力使用这些工具。", "sections": ["词汇表：英文释义 + 原文出处，中文列留白自测", "原文全文，两栏排版", "PART 1 词汇：看释义写单词（10 题）", "PART 2 选词填空：15 选 10", "PART 3 阅读理解：5 题", "PART 4 汉译英：段落翻译，含作答横线", "PART 5 写作：150–200 词，含作答横线", "参考答案（末页，含中文释义）"], "pdf": "how-ai-can-revolutionise-science.pdf", "pdfSize": "258 KB", "counts": {"words": 10, "cloze": 10, "quiz": 5}}]}</script>
 <script>
-(function () {
-  var data = JSON.parse(document.getElementById('cards-data').textContent);
-  var grid = document.getElementById('grid');
-  var noresult = document.getElementById('noresult');
-  var esc = function (s) {
-    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
-      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
-    });
-  };
-  var html = data.map(function (m) {
-    var tags = (m.tags || []).map(function (t) { return '<span class="tag">' + esc(t) + '</span>'; }).join('');
-    var secs = (m.sections || []).map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('');
-    return '<article class="card" data-tags="' + esc(m.tags_attr) + '">' +
-      '<div class="card-top"><span class="no">' + esc(m.no) + '</span>' +
-        '<div class="src"><span class="pub">' + esc(m.source) + '</span>' +
-          (m.page ? '<span class="sep">/</span><span>' + esc(m.page) + '</span>' : '') +
-          (m.date ? '<span class="sep">/</span><span>' + esc(m.date) + '</span>' : '') +
-        '</div>' +
-        (m.missing ? '<span class="pill bad">文件缺失</span>'
-                   : '<span class="pill ok">' + esc(m.size) + '</span>') +
-      '</div>' +
-      '<h2>' + esc(m.title) + '</h2>' +
-      '<p class="zh">' + esc(m.zh) + (m.topic ? ' <span class="sep">·</span> ' + esc(m.topic) : '') + '</p>' +
-      '<p class="summary">' + esc(m.summary) + '</p>' +
-      (tags ? '<div class="tags">' + tags + '</div>' : '') +
-      (secs ? '<details><summary>讲义结构 <span class="count">' + m.sections.length +
-              ' 个部分</span></summary><ul class="secs">' + secs + '</ul></details>' : '') +
-      '<div class="actions">' +
-        '<a class="btn primary" href="' + esc(m.href) + '" target="_blank" rel="noopener">翻开讲义</a>' +
-        '<a class="btn" href="' + esc(m.href) + '" download>下载 PDF</a>' +
-      '</div></article>';
-  }).join('');
-  grid.innerHTML = html || '<p class="empty">还没有讲义。</p>';
+'use strict';
+var SITE_INDEX = JSON.parse(document.getElementById('index-data').textContent);
+var $ = function (s, r) { return (r || document).querySelector(s); };
+var $$ = function (s, r) { return [].slice.call((r || document).querySelectorAll(s)); };
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){
+  return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 
-  var cards = [].slice.call(grid.querySelectorAll('.card'));
-  document.getElementById('chips').addEventListener('click', function (e) {
-    var btn = e.target.closest('.chip');
-    if (!btn) return;
-    [].forEach.call(document.querySelectorAll('.chip'), function (c) {
-      c.setAttribute('aria-pressed', String(c === btn));
-    });
+/* ---------------- progress storage ---------------- */
+var STORE = 'cet6.progress.v1';
+function loadProgress(){ try { return JSON.parse(localStorage.getItem(STORE)) || {}; }
+  catch(e){ return {}; } }
+function saveProgress(p){ try { localStorage.setItem(STORE, JSON.stringify(p)); } catch(e){} }
+function getMod(id){ var p = loadProgress(); return p[id] || (p[id] = {}); }
+function setScore(id, part, got, total){
+  var p = loadProgress(); var m = p[id] || (p[id] = {});
+  m[part] = { got: got, total: total, at: Date.now() };
+  saveProgress(p);
+}
+function modSummary(id){
+  var m = loadProgress()[id]; if(!m) return null;
+  var got=0, tot=0, n=0;
+  ['vocab','cloze','quiz'].forEach(function(k){
+    if(m[k]){ got+=m[k].got; tot+=m[k].total; n++; }});
+  return n ? {got:got, tot:tot, parts:n} : null;
+}
+
+/* ---------------- library ---------------- */
+function renderLibrary(){
+  var grid = $('#grid');
+  grid.innerHTML = SITE_INDEX.modules.map(function(m, i){
+    var s = modSummary(m.id);
+    var prog = s ? '<span class="tag" style="background:#eefaf2;color:#1a7f45">已练习 '
+        + s.got + '/' + s.tot + '</span>' : '';
+    return '<article class="card" data-tags="' + esc((m.tags||[]).join(' ')) + '">'
+      + '<div class="card-top"><span class="no">' + String(i+1).padStart(2,'0') + '</span>'
+      + '<span class="pub">' + esc(m.source) + '</span>'
+      + (m.page?'<span class="sep">/</span><span>'+esc(m.page)+'</span>':'')
+      + (m.date?'<span class="sep">/</span><span>'+esc(m.date)+'</span>':'')
+      + (m.pdfSize?'<span class="sep">/</span><span>'+esc(m.pdfSize)+'</span>':'')
+      + '</div>'
+      + '<h2>' + esc(m.title) + '</h2>'
+      + '<p class="zh">' + esc(m.zh) + (m.topic?' <span class="sep">·</span> '+esc(m.topic):'') + '</p>'
+      + '<p class="summary">' + esc(m.summary) + '</p>'
+      + '<div class="tags">' + (m.tags||[]).map(function(t){
+          return '<span class="tag">'+esc(t)+'</span>';}).join('') + prog + '</div>'
+      + '<div class="actions">'
+      + '<a class="btn primary" href="#/m/' + esc(m.slug) + '">开始学习</a>'
+      + '<a class="btn" href="' + esc(m.pdf) + '" target="_blank" rel="noopener">打印 PDF</a>'
+      + '<a class="btn ghost" href="' + esc(m.pdf) + '" download>下载</a>'
+      + '</div></article>';
+  }).join('');
+  bindChips();
+}
+function bindChips(){
+  $('#chips').addEventListener('click', function(e){
+    var btn = e.target.closest('.chip'); if(!btn) return;
+    $$('.chip').forEach(function(c){ c.setAttribute('aria-pressed', String(c===btn)); });
     var tag = btn.dataset.tag, shown = 0;
-    cards.forEach(function (c) {
-      var hit = !tag || (c.dataset.tags || '').split(/\s+/).indexOf(tag) >= 0;
-      c.style.display = hit ? '' : 'none';
-      if (hit) shown++;
+    $$('.card').forEach(function(c){
+      var hit = !tag || (c.dataset.tags||'').split(/\s+/).indexOf(tag) >= 0;
+      c.style.display = hit ? '' : 'none'; if(hit) shown++;
     });
-    noresult.style.display = shown ? 'none' : 'block';
+    $('#empty').hidden = shown > 0;
   });
-})();
+}
+
+/* ---------------- module shell ---------------- */
+var MOD = null, TABS = [];
+function renderModule(slug){
+  var meta = SITE_INDEX.modules.filter(function(m){return m.slug===slug;})[0];
+  if(!meta){ location.hash='#/'; return; }
+  fetch('data/' + slug + '.json').then(function(r){ return r.json(); }).then(function(d){
+    MOD = d; drawModule(meta, d);
+  }).catch(function(){
+    $('#view-module').innerHTML = '<p class="empty">数据加载失败。</p>';
+  });
+}
+function drawModule(meta, d){
+  TABS = [
+    {k:'read',  name:'原文'},
+    {k:'study', name:'背单词', badge:d.words.length},
+    {k:'vocab', name:'词汇练习', badge:d.vocabQuiz.length},
+    {k:'cloze', name:'选词填空', badge:d.cloze.blankCount},
+    {k:'quiz',  name:'阅读理解', badge:d.quiz.length},
+    {k:'trans', name:'汉译英'},
+    {k:'essay', name:'写作'}
+  ];
+  var v = $('#view-module');
+  v.innerHTML =
+    '<p class="crumb"><a href="#/">← 讲义库</a></p>'
+    + '<div class="mod-head"><h2>' + esc(d.title) + '</h2>'
+    + '<p class="zh">' + esc(meta.zh) + '</p>'
+    + '<div class="src">' + esc(d.source) + ' · ' + esc(meta.topic||'') + '</div></div>'
+    + '<div class="tabs" id="tabs" role="tablist">'
+    + TABS.map(function(t,i){
+        return '<button class="tab" role="tab" data-k="'+t.k+'" aria-selected="'
+          + (i===0) + '">'+t.name
+          + (t.badge?'<span class="badge">'+t.badge+'</span>':'')+'</button>';}).join('')
+    + '</div><div id="panel"></div>';
+  $('#tabs').addEventListener('click', function(e){
+    var b = e.target.closest('.tab'); if(!b) return;
+    $$('.tab').forEach(function(x){ x.setAttribute('aria-selected', String(x===b)); });
+    showTab(b.dataset.k);
+  });
+  showTab('read');
+}
+function showTab(k){
+  var p = $('#panel');
+  if(k==='read')  p.innerHTML = tabRead(MOD);
+  if(k==='study') p.innerHTML = tabStudy(MOD);
+  if(k==='vocab') p.innerHTML = tabVocab(MOD);
+  if(k==='cloze'){ p.innerHTML = tabCloze(MOD); bindCloze(); }
+  if(k==='quiz'){ p.innerHTML = tabQuiz(MOD); bindQuiz(); }
+  if(k==='trans') p.innerHTML = tabTrans(MOD);
+  if(k==='essay') p.innerHTML = tabEssay(MOD);
+  if(k==='study') bindStudy();
+  if(k==='vocab') bindVocab();
+  window.scrollTo({top:0, behavior:'instant'});
+}
+
+/* ---------------- tabs ---------------- */
+function tabRead(d){
+  return '<h3 class="sec">原文</h3>'
+    + (d.preQuestions.length ? '<div class="note"><b>读前思考：</b><ol style="margin:6px 0 0 20px">'
+        + d.preQuestions.map(function(q){return '<li>'+esc(q)+'</li>';}).join('') + '</ol></div>' : '')
+    + '<div class="article">' + d.article.map(function(p){
+        return '<p>' + esc(p) + '</p>'; }).join('') + '</div>';
+}
+
+function tabStudy(d){
+  return '<h3 class="sec">背单词</h3>'
+    + '<p class="note">先看英文释义自己想中文，点「显示中文」核对。共 ' + d.words.length + ' 个词。</p>'
+    + '<div class="vcards">' + d.words.map(function(w,i){
+        return '<div class="vcard"><div class="top"><span class="term">'+esc(w.term)+'</span>'
+          + '<span class="ipa">'+esc(w.ipa)+'</span><span class="pos">'+esc(w.pos)+'</span></div>'
+          + '<p class="def">'+esc(w.definition)+'</p>'
+          + '<p class="quote">“'+esc(w.quote)+'”</p>'
+          + (w.forms?'<p class="forms">'+esc(w.forms)+'</p>':'')
+          + '<p class="zh hidden" data-zh="'+i+'">'+esc(w.chinese)+'</p>'
+          + '<button class="reveal" data-r="'+i+'">显示中文</button></div>';
+      }).join('') + '</div>';
+}
+function bindStudy(){
+  $$('.reveal').forEach(function(b){
+    b.addEventListener('click', function(){
+      var zh = $('[data-zh="'+b.dataset.r+'"]');
+      var on = zh.classList.toggle('hidden');
+      b.textContent = on ? '显示中文' : '隐藏中文';
+    });
+  });
+}
+
+function tabVocab(d){
+  return '<h3 class="sec">PART 1 词汇</h3>'
+    + '<p class="note">根据英文释义写出单词，填完点「提交」。</p>'
+    + d.vocabQuiz.map(function(q,i){
+        return '<div class="q"><p class="stem">'+(i+1)+'. '+esc(q.definition)+'</p>'
+          + '<input class="blank" data-vq="'+i+'" autocomplete="off" spellcheck="false"'
+          + ' style="width:180px">'
+          + '<span class="fb" data-vfb="'+i+'" style="margin-left:10px;font-size:13.5px"></span>'
+          + '</div>';}).join('')
+    + '<div class="scorebar"><span class="score" id="v-score">—</span>'
+    + '<div class="bar"><i id="v-bar"></i></div>'
+    + '<button class="btn primary" id="v-submit">提交</button>'
+    + '<button class="btn" id="v-show">显示答案</button></div>';
+}
+function bindVocab(){
+  var d = MOD;
+  function grade(reveal){
+    var got = 0;
+    d.vocabQuiz.forEach(function(q,i){
+      var inp = $('[data-vq="'+i+'"]'), fb = $('[data-vfb="'+i+'"]');
+      var mine = (inp.value||'').trim().toLowerCase();
+      var want = q.answer;
+      var ok = mine === want;
+      if(reveal){ inp.value = want; inp.classList.remove('wrong'); inp.classList.add('correct');
+        fb.textContent = '答案：' + want; fb.style.color = 'var(--ok)'; got++; return; }
+      inp.classList.toggle('correct', ok);
+      inp.classList.toggle('wrong', !!mine && !ok);
+      fb.textContent = ok ? '✓' : (mine ? '✗ 正确答案：' + want : '');
+      fb.style.color = ok ? 'var(--ok)' : 'var(--bad)';
+      if(ok) got++;
+    });
+    if(!reveal){
+      $('#v-score').innerHTML = got + ' / ' + d.vocabQuiz.length + ' 分';
+      $('#v-bar').style.width = (100*got/d.vocabQuiz.length) + '%';
+      setScore(MOD.id, 'vocab', got, d.vocabQuiz.length);
+    } else {
+      $('#v-score').innerHTML = '<span class="small">已显示答案</span>';
+    }
+  }
+  $('#v-submit').addEventListener('click', function(){ grade(false); });
+  $('#v-show').addEventListener('click', function(){ grade(true); });
+}
+
+function tabCloze(d){
+  var c = d.cloze;
+  var body = c.parts.map(function(seg, i){
+    var out = '<span>' + esc(seg) + '</span>';
+    if(i < c.parts.length - 1){
+      out += ' <input class="blank" data-bi="' + i + '" autocomplete="off" spellcheck="false"'
+           + ' placeholder="' + (i+1) + '"> ';
+    }
+    return out;
+  }).join('');
+  return '<h3 class="sec">PART 2 选词填空</h3>'
+    + '<p class="note">' + esc(c.intro||'') + '</p>'
+    + '<div class="bank">' + c.options.map(function(o){
+        return '<span class="w"><span class="l">'+esc(o.letter)+'</span>'+esc(o.word)+'</span>';
+      }).join('') + '</div>'
+    + '<div class="cloze">' + body + '</div>'
+    + '<div class="scorebar"><span class="score" id="c-score">—</span>'
+    + '<div class="bar"><i id="c-bar"></i></div>'
+    + '<button class="btn primary" id="c-submit">提交</button>'
+    + '<button class="btn" id="c-show">显示答案</button></div>';
+}
+function bindCloze(){
+  var c = MOD.cloze, total = c.blankCount;
+  function grade(reveal){
+    var got = 0;
+    for(var n=1; n<=total; n++){
+      var inp = $('[data-bi="'+(n-1)+'"]'); if(!inp) continue;
+      var want = c.answers[String(n)];
+      var mine = (inp.value||'').trim().toLowerCase();
+      if(reveal){ inp.value = want; inp.classList.remove('wrong');
+        inp.classList.add('correct'); got++; continue; }
+      var ok = mine === want;
+      inp.classList.toggle('correct', ok);
+      inp.classList.toggle('wrong', !!mine && !ok);
+      if(ok) got++;
+    }
+    if(!reveal){
+      $('#c-score').innerHTML = got + ' / ' + total + ' 分';
+      $('#c-bar').style.width = (100*got/total) + '%';
+      setScore(MOD.id, 'cloze', got, total);
+    } else { $('#c-score').innerHTML = '<span class="small">已显示答案</span>'; }
+  }
+  $('#c-submit').addEventListener('click', function(){ grade(false); });
+  $('#c-show').addEventListener('click', function(){ grade(true); });
+}
+
+function tabQuiz(d){
+  return '<h3 class="sec">PART 3 阅读理解</h3>'
+    + '<p class="note">选出最佳答案，选完点「提交」。</p>'
+    + d.quiz.map(function(q,i){
+        return '<div class="q"><p class="stem">'+(i+1)+'. '+esc(q.stem)+'</p><div class="opts">'
+          + q.options.map(function(o){
+              var letter = o.trim()[0];
+              return '<label class="opt" data-q="'+i+'" data-l="'+letter+'">'
+                + '<input type="radio" name="q'+i+'" value="'+letter+'">'
+                + '<span>'+esc(o)+'</span></label>';}).join('')
+          + '</div></div>';}).join('')
+    + '<div class="scorebar"><span class="score" id="q-score">—</span>'
+    + '<div class="bar"><i id="q-bar"></i></div>'
+    + '<button class="btn primary" id="q-submit">提交</button>'
+    + '<button class="btn" id="q-show">显示答案</button></div>';
+}
+function bindQuiz(){
+  var d = MOD;
+  function grade(reveal){
+    var got = 0;
+    d.quiz.forEach(function(q,i){
+      $$('[data-q="'+i+'"]').forEach(function(lab){
+        var L = lab.dataset.l;
+        lab.classList.remove('correct','wrong');
+        if(L === q.answer) lab.classList.add('correct');
+        var chosen = $('input[name="q'+i+'"]:checked');
+        if(!reveal && chosen && chosen.value === L && L !== q.answer) lab.classList.add('wrong');
+      });
+      var chosen = $('input[name="q'+i+'"]:checked');
+      if(reveal){ $('input[name="q'+i+'"][value="'+q.answer+'"]').checked = true; got++; }
+      else if(chosen && chosen.value === q.answer) got++;
+    });
+    if(!reveal){
+      $('#q-score').innerHTML = got + ' / ' + d.quiz.length + ' 分';
+      $('#q-bar').style.width = (100*got/d.quiz.length) + '%';
+      var pass = got >= Math.ceil(d.quiz.length*0.6);
+      $('#q-score').innerHTML += ' <span class="verdict ' + (pass?'pass':'fail') + '">'
+        + (pass ? '达标' : '再读一遍原文') + '</span>';
+      setScore(MOD.id, 'quiz', got, d.quiz.length);
+    } else { $('#q-score').innerHTML = '<span class="small">已显示答案</span>'; }
+  }
+  $('#q-submit').addEventListener('click', function(){ grade(false); });
+  $('#q-show').addEventListener('click', function(){ grade(true); });
+}
+
+function tabTrans(d){
+  return '<h3 class="sec">PART 4 汉译英</h3>'
+    + '<p class="note">先把中文段落译成英文，写完后对照参考译文自查。</p>'
+    + '<div class="cloze" style="font-family:var(--sans);font-size:15px">'
+    + esc(d.translation.prompt) + '</div>'
+    + '<p class="note" style="margin:16px 0 8px">你的译文：</p>'
+    + '<textarea rows="8" id="trans-in" placeholder="在这里写你的英文译文…"></textarea>'
+    + '<div class="actions" style="margin-top:12px">'
+    + '<button class="btn primary" id="trans-show">对照参考译文</button>'
+    + '<button class="btn" id="trans-save">保存我的译文</button></div>'
+    + '<div id="trans-model"></div>';
+}
+function tabEssay(d){
+  return '<h3 class="sec">PART 5 写作</h3>'
+    + '<p class="note">' + esc(d.essay.prompt) + '</p>'
+    + '<p class="note" style="margin:16px 0 8px">你的作文（直接在这里写，会自动保存）：</p>'
+    + '<textarea rows="14" id="essay-in" placeholder="在这里写你的作文…"></textarea>'
+    + '<div class="actions" style="margin-top:12px">'
+    + '<button class="btn primary" id="essay-show">对照参考范文</button>'
+    + '<span class="note" id="essay-count" style="margin:0"></span></div>'
+    + '<div id="essay-model"></div>';
+}
+
+/* ---------------- draft saving + self-assessment ---------------- */
+function draftKey(id, part){ return 'cet6.draft.' + id + '.' + part; }
+function bindDrafts(){
+  // translation
+  var t = $('#trans-in');
+  if(t){
+    t.value = localStorage.getItem(draftKey(MOD.id,'trans')) || '';
+    t.addEventListener('input', function(){
+      localStorage.setItem(draftKey(MOD.id,'trans'), t.value); });
+    $('#trans-save').addEventListener('click', function(){
+      localStorage.setItem(draftKey(MOD.id,'trans'), t.value);
+      this.textContent = '已保存 ✓'; var b=this;
+      setTimeout(function(){ b.textContent='保存我的译文'; }, 1200);
+    });
+    $('#trans-show').addEventListener('click', function(){
+      $('#trans-model').innerHTML = '<div class="model"><h4>参考译文</h4>'
+        + esc(MOD.translation.model) + '</div>'
+        + '<p class="note" style="margin-top:12px">对照检查这几点：'
+        + '① 7.2% / 1.4% 的数字写对了吗　②「采用程度差异很大」用 degree of adoption '
+        + 'vary widely 这类表达了吗　③「并非技术性而是社会性」用 not…but… 结构了吗</p>';
+    });
+  }
+  // essay
+  var e = $('#essay-in'), cnt = $('#essay-count');
+  if(e){
+    e.value = localStorage.getItem(draftKey(MOD.id,'essay')) || '';
+    var upd = function(){ var n = e.value.trim().split(/\s+/).filter(Boolean).length;
+      cnt.textContent = '当前 ' + n + ' 词' + (n>=150&&n<=200 ? '（符合要求）' :
+        (n? '（要求 150–200 词）' : '')); };
+    upd();
+    e.addEventListener('input', function(){
+      localStorage.setItem(draftKey(MOD.id,'essay'), e.value); upd(); });
+    $('#essay-show').addEventListener('click', function(){
+      $('#essay-model').innerHTML = '<div class="model"><h4>参考范文</h4>'
+        + esc(MOD.essay.model) + '</div>';
+    });
+  }
+}
+
+/* ---------------- router ---------------- */
+function route(){
+  var h = location.hash || '#/';
+  var m = h.match(/^#\/m\/(.+)$/);
+  if(m){
+    $('#view-library').hidden = true;
+    $('#view-module').hidden = false;
+    renderModule(decodeURIComponent(m[1]));
+  } else {
+    $('#view-module').hidden = true;
+    $('#view-library').hidden = false;
+    renderLibrary();
+  }
+}
+window.addEventListener('hashchange', route);
+var _showTab = showTab;
+showTab = function(k){ _showTab(k); bindDrafts(); };
+route();
 </script>
 </body>
 </html>
