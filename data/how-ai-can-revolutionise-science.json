@@ -1,0 +1,320 @@
+{
+ "id": "how-ai-can-revolutionise-science",
+ "title": "How AI can revolutionise science",
+ "zh": "人工智能如何变革科学",
+ "source": "The Economist | Leaders (p. 11)",
+ "words": [
+  {
+   "term": "fret",
+   "ipa": "/fret/",
+   "pos": "v.",
+   "definition": "to worry continuously about something",
+   "quote": "some observers fret about these dystopian scenarios",
+   "chinese": "担忧；发愁",
+   "forms": "fret (v.) ｜ fretful (adj.) ｜ fret about / over sth"
+  },
+  {
+   "term": "thorny",
+   "ipa": "/ˈθɔːni/",
+   "pos": "adj.",
+   "definition": "complicated and difficult to deal with",
+   "quote": "some of its biggest and thorniest problems",
+   "chinese": "棘手的；麻烦的",
+   "forms": "thorny (adj.) ｜ thorn (n.) ｜ a thorny issue / question"
+  },
+  {
+   "term": "laud",
+   "ipa": "/lɔːd/",
+   "pos": "v.",
+   "definition": "to praise someone or something highly",
+   "quote": "The electric telegraph was lauded in the 1850s",
+   "chinese": "称赞；赞美",
+   "forms": "laud (v.) ｜ laudable (adj.) ｜ laudatory (adj.)"
+  },
+  {
+   "term": "pundit",
+   "ipa": "/ˈpʌndɪt/",
+   "pos": "n.",
+   "definition": "an expert who gives opinions in the media",
+   "quote": "pundits in the 1990s said the internet would",
+   "chinese": "专家；评论员",
+   "forms": "pundit (n.) ｜ punditry (n.) ｜ commentator (同义)"
+  },
+  {
+   "term": "eradicate",
+   "ipa": "/ɪˈrædɪkeɪt/",
+   "pos": "v.",
+   "definition": "to remove or destroy something completely",
+   "quote": "reduce inequality and eradicate nationalism",
+   "chinese": "根除；消灭",
+   "forms": "eradicate (v.) ｜ eradication (n.) ｜ eradicated (adj.)"
+  },
+  {
+   "term": "mingle",
+   "ipa": "/ˈmɪŋɡl/",
+   "pos": "v.",
+   "definition": "to mix or combine with other things",
+   "quote": "by allowing people and ideas to mingle in new ways",
+   "chinese": "混合；交融",
+   "forms": "mingle (v.) ｜ mingle with ｜ intermingle (v.)"
+  },
+  {
+   "term": "sift",
+   "ipa": "/sɪft/",
+   "pos": "v.",
+   "definition": "to examine a large amount of information carefully",
+   "quote": "It can sift through piles of data",
+   "chinese": "细查；筛选",
+   "forms": "sift (v.) ｜ sift through ｜ sifter (n.)"
+  },
+  {
+   "term": "realm",
+   "ipa": "/relm/",
+   "pos": "n.",
+   "definition": "an area of activity, interest or knowledge",
+   "quote": "explore previously inaccessible realms",
+   "chinese": "领域；范围",
+   "forms": "realm (n.) ｜ the realm of ｜ sphere / domain (同义)"
+  },
+  {
+   "term": "poised",
+   "ipa": "/pɔɪzd/",
+   "pos": "adj.",
+   "definition": "ready and about to do something",
+   "quote": "is poised to do the same in the coming years",
+   "chinese": "准备就绪的；蓄势待发的",
+   "forms": "poised (adj.) ｜ be poised to do ｜ poise (n.)"
+  },
+  {
+   "term": "feasible",
+   "ipa": "/ˈfiːzəbl/",
+   "pos": "adj.",
+   "definition": "possible to do successfully",
+   "quote": "is therefore feasible",
+   "chinese": "可行的；行得通的",
+   "forms": "feasible (adj.) ｜ feasibility (n.) ｜ unfeasible (adj.)"
+  }
+ ],
+ "article": [
+  "DEBATE about artificial intelligence (AI) tends to focus on its potential dangers: algorithmic bias and discrimination, the mass destruction of jobs and even, some say, the extinction of humanity. As some observers fret about these dystopian scenarios, however, others are focusing on the potential rewards. AI could, they claim, help humanity solve some of its biggest and thorniest problems. And, they say, AI will do this in a very specific way: by radically accelerating the pace of scientific discovery, especially in areas such as medicine, climate science and green technology. Luminaries in the field such as Demis Hassabis and Yann LeCun believe that AI can turbocharge scientific progress and lead to a golden age of discovery. Could they be right?",
+  "Such claims are worth examining, and may provide a useful counterbalance to fears about large-scale unemployment and killer robots. Many previous technologies have, of course, been falsely hailed as panaceas. The electric telegraph was lauded in the 1850s as a herald of world peace, as were aircraft in the 1900s; pundits in the 1990s said the internet would reduce inequality and eradicate nationalism. But the mechanism by which AI will supposedly solve the world’s problems has a stronger historical basis, because there have been several periods in history when new approaches and new tools did indeed help bring about bursts of world-changing scientific discovery and innovation.",
+  "In the 17th century microscopes and telescopes opened up new vistas of discovery and encouraged researchers to favour their own observations over the received wisdom of antiquity, while the introduction of scientific journals gave them new ways to share and publicise their findings. The result was rapid progress in astronomy, physics and other fields, and new inventions from the pendulum clock to the steam engine—the prime mover of the Industrial Revolution.",
+  "Then, starting in the late 19th century, the establishment of research laboratories, which brought together ideas, people and materials on an industrial scale, gave rise to further innovations such as artificial fertiliser, pharmaceuticals and the transistor, the building block of the computer. From the mid-20th century, computers in turn enabled new forms of science based on simulation and modelling, from the design of weapons and aircraft to more accurate weather forecasting.",
+  "And the computer revolution may not be finished yet. As we report in a special Science section, AI tools and techniques are now being applied in almost every field of science, though the degree of adoption varies widely: 7.2% of physics and astronomy papers published in 2022 involved AI, for example, compared with 1.4% in veterinary science. AI is being employed in many ways. It can identify promising candidates for analysis, such as molecules with particular properties in drug discovery, or materials with the characteristics needed in batteries or solar cells. It can sift through piles of data such as those produced by particle colliders or robotic telescopes, looking for patterns. And AI can model and analyse even more complex systems, such as the folding of proteins and the formation of galaxies. AI tools have been used to identify new antibiotics, reveal the Higgs boson and spot regional accents in wolves, among other things.",
+  "All this is to be welcomed. But the journal and the laboratory went further still: they altered scientific practice itself and unlocked more powerful means of making discoveries, by allowing people and ideas to mingle in new ways and on a larger scale. AI, too, has the potential to set off such a transformation.",
+  "Two areas in particular look promising. The first is “literature-based discovery” (LBD), which involves analysing existing scientific literature, using ChatGPT-style language analysis, to look for new hypotheses, connections or ideas that humans may have missed. LBD is showing promise in identifying new experiments to try—and even suggesting potential research collaborators. This could stimulate interdisciplinary work and foster innovation at the boundaries between fields. LBD systems can also identify “blind spots” in a given field, and even predict future discoveries and who will make them.",
+  "The second area is “robot scientists”, also known as “self-driving labs”. These are robotic systems that use AI to form new hypotheses, based on analysis of existing data and literature, and then test those hypotheses by performing hundreds or thousands of experiments, in fields including systems biology and materials science. Unlike human scientists, robots are less attached to previous results, less driven by bias—and, crucially, easy to replicate. They could scale up experimental research, develop unexpected theories and explore avenues that human investigators might not have considered.",
+  "The idea that AI might transform scientific practice is therefore feasible. But the main barrier is sociological: it can happen only if human scientists are willing and able to use such tools. Many lack skills and training; some worry about being put out of a job. Fortunately, there are hopeful signs. AI tools are now moving from being pushed by AI researchers to being embraced by specialists in other fields.",
+  "Governments and funding bodies could help by pressing for greater use of common standards to allow AI systems to exchange and interpret laboratory results and other data. They could also fund more research into the integration of AI smarts with laboratory robotics, and into forms of AI beyond those being pursued in the private sector, which has bet nearly all its chips on language-based systems like ChatGPT. Less fashionable forms of AI, such as model-based machine learning, may be better suited to scientific tasks such as forming hypotheses.",
+  "In 1665, during a period of rapid scientific progress, Robert Hooke, an English polymath, described the advent of new scientific instruments such as the microscope and telescope as “the adding of artificial organs to the natural”. They let researchers explore previously inaccessible realms and discover things in new ways, “with prodigious benefit to all sorts of useful knowledge”. For Hooke’s modern-day successors, the adding of artificial intelligence to the scientific toolkit is poised to do the same in the coming years—with similarly world-changing results."
+ ],
+ "preQuestions": [
+  "The article compares AI with earlier tools such as the microscope and the computer. Which earlier change do you think is the closest parallel, and why?",
+  "The author says the main barrier is \"sociological\" rather than technical. What would that look like in your own school or workplace?"
+ ],
+ "vocabQuiz": [
+  {
+   "definition": "to worry continuously about something",
+   "answer": "fret"
+  },
+  {
+   "definition": "complicated and difficult to deal with",
+   "answer": "thorny"
+  },
+  {
+   "definition": "to praise someone or something highly",
+   "answer": "laud"
+  },
+  {
+   "definition": "an expert who gives opinions in the media",
+   "answer": "pundit"
+  },
+  {
+   "definition": "to remove or destroy something completely",
+   "answer": "eradicate"
+  },
+  {
+   "definition": "to mix or combine with other things",
+   "answer": "mingle"
+  },
+  {
+   "definition": "to examine a large amount of information carefully",
+   "answer": "sift"
+  },
+  {
+   "definition": "an area of activity, interest or knowledge",
+   "answer": "realm"
+  },
+  {
+   "definition": "ready and about to do something",
+   "answer": "poised"
+  },
+  {
+   "definition": "possible to do successfully",
+   "answer": "feasible"
+  }
+ ],
+ "vocabAnswers": {
+  "1": "fret",
+  "2": "thorny",
+  "3": "laud",
+  "4": "pundit",
+  "5": "eradicate",
+  "6": "mingle",
+  "7": "sift",
+  "8": "realm",
+  "9": "poised",
+  "10": "feasible"
+ },
+ "cloze": {
+  "intro": "Read the passage and choose one word for each blank from the box below. Each word may be used only once. There are five extra words.",
+  "options": [
+   {
+    "letter": "A",
+    "word": "eradicate"
+   },
+   {
+    "letter": "B",
+    "word": "eradication"
+   },
+   {
+    "letter": "C",
+    "word": "feasible"
+   },
+   {
+    "letter": "D",
+    "word": "feasibility"
+   },
+   {
+    "letter": "E",
+    "word": "fret"
+   },
+   {
+    "letter": "F",
+    "word": "fretful"
+   },
+   {
+    "letter": "G",
+    "word": "laud"
+   },
+   {
+    "letter": "H",
+    "word": "laudable"
+   },
+   {
+    "letter": "I",
+    "word": "mingle"
+   },
+   {
+    "letter": "J",
+    "word": "pundit"
+   },
+   {
+    "letter": "K",
+    "word": "poised"
+   },
+   {
+    "letter": "L",
+    "word": "realm"
+   },
+   {
+    "letter": "M",
+    "word": "sift"
+   },
+   {
+    "letter": "N",
+    "word": "thorny"
+   },
+   {
+    "letter": "O",
+    "word": "thorns"
+   }
+  ],
+  "blankCount": 10,
+  "parts": [
+   "Artificial intelligence is spreading through almost every branch of science. Supporters say it could speed up discovery, much as the microscope and the computer did in earlier centuries. Claims of that kind deserve close examination, since similar promises were made for the telegraph and the internet, and newspapers once ",
+   " every new machine as the answer to everything.\nThe article argues that today’s claims rest on a firmer historical foundation. What matters is that new tools change how research is done, not merely how quickly. The arrival of better instruments in the 17th century allowed ideas to travel further and faster; computers later made it possible to ",
+   " through huge quantities of data that no individual could ever read. Each development altered practice itself.\nTwo applications look especially promising. The first examines the existing literature to find connections that researchers have missed, and because it draws on several fields at once it opens up a ",
+   " that used to be closed to any single specialist. The second uses robots to form and test hypotheses, and because a machine can be switched on again and again, its experiments are easy to repeat and check.\nThe main obstacle is not technical. The idea is ",
+   " only if researchers are willing and able to use the tools, and many lack the training. In some fields specialists have neither the time nor the resources to test their own methods, and that is a ",
+   " problem to solve.\nCritics, however, are beginning to ",
+   " about the pace of change. The article notes that the degree of adoption still varies enormously: AI appears in 7.2% of physics and astronomy papers but only 1.4% of those in veterinary science. The author warns about one risk that has nothing to do with speed: algorithmic bias, in which a machine repeats the unfair assumptions built into its training data.\nIt would be easy to dismiss such concerns, but they deserve a serious answer. Bad decisions made cheaply can spread far, and no ",
+   " in the media has yet explained how to stop them. Yet the tools themselves are not the problem. What matters is whether different kinds of expertise can ",
+   " in the same laboratory, and whether governments will pay for work that crosses traditional boundaries in order to ",
+   " the worst abuses before they become routine. The technology is ",
+   " to change scientific practice; whether it improves it is a question for people, not machines."
+  ],
+  "answers": {
+   "1": "laud",
+   "2": "sift",
+   "3": "realm",
+   "4": "feasible",
+   "5": "thorny",
+   "6": "fret",
+   "7": "pundit",
+   "8": "mingle",
+   "9": "eradicate",
+   "10": "poised"
+  }
+ },
+ "quiz": [
+  {
+   "stem": "What does the article say about earlier technologies such as the electric telegraph and the internet?",
+   "options": [
+    "A. They were described as solutions to everything, but did not live up to it.",
+    "B. They were never expected to change society at all.",
+    "C. They reduced inequality more successfully than AI is likely to.",
+    "D. They were rejected by scientists at the time."
+   ],
+   "answer": "A"
+  },
+  {
+   "stem": "Why does the author treat the claims about AI more favourably than those earlier claims?",
+   "options": [
+    "A. AI is funded by governments rather than private firms.",
+    "B. AI has already replaced most laboratory work.",
+    "C. New tools have repeatedly led to periods of rapid scientific discovery.",
+    "D. Scientists now agree on what AI can achieve."
+   ],
+   "answer": "C"
+  },
+  {
+   "stem": "The figures 7.2% and 1.4% are used to show that:",
+   "options": [
+    "A. physics is a more valuable subject than veterinary science.",
+    "B. most scientific papers still contain no AI at all.",
+    "C. AI is mainly used for writing papers rather than doing research.",
+    "D. AI is used in science to very different degrees across fields."
+   ],
+   "answer": "D"
+  },
+  {
+   "stem": "According to the article, what is the main thing standing in the way of AI transforming science?",
+   "options": [
+    "A. The cost of laboratory robots.",
+    "B. Whether scientists are willing and able to use the tools.",
+    "C. The poor quality of language-based AI systems.",
+    "D. A lack of interest from private companies."
+   ],
+   "answer": "B"
+  },
+  {
+   "stem": "Why does the article mention Robert Hooke?",
+   "options": [
+    "A. To show that AI is only another laboratory instrument.",
+    "B. To argue that science has advanced little since the 17th century.",
+    "C. To prove that Hooke invented the microscope.",
+    "D. To suggest that AI may enlarge human capabilities much as early instruments did."
+   ],
+   "answer": "D"
+  }
+ ],
+ "translation": {
+  "prompt": "人工智能正在被用于几乎每一个科学领域，但各学科的采用程度差异很大：在 2022 年发表的论文中，物理学和天文学有 7.2% 涉及人工智能，而兽医学只有 1.4%。支持者认为，这类工具能够大幅加快科学发现的速度，正如当年的显微镜、实验室和计算机一样。不过，主要的障碍并非技术性的，而是社会性的：只有当科研人员愿意并且有能力使用这些工具时，这种转变才可能真正发生。",
+  "model": "Artificial intelligence is now being applied in almost every field of science, but the degree of adoption varies widely: of the papers published in 2022, 7.2% in physics and astronomy involved AI, compared with only 1.4% in veterinary science. Supporters argue that such tools can greatly accelerate the pace of scientific discovery, much as microscopes, laboratories and computers did in their day. The main barrier, however, is not technical but sociological: such a change can take place only if researchers are willing and able to use these tools."
+ },
+ "essay": {
+  "prompt": "Some people argue that governments should spend more money on artificial intelligence for scientific research, even when the benefits are still uncertain. Others believe that money should go to methods that are already known to work. Discuss both views and give your own opinion. Write 150–200 words.",
+  "model": "Whether public money should be spent on artificial intelligence for science is a question about risk rather than enthusiasm.\nThose who favour such spending make a fair point. The article reminds us that microscopes, industrial laboratories and computers each produced bursts of discovery that nobody could have predicted in advance. If governments fund only methods whose value is already proven, they will never pay for the tools that matter most in twenty years. Public funding also matters because private firms have concentrated almost all their effort on language-based systems, leaving other approaches short of support.\nThe opposing view is also reasonable. Money spent on an uncertain technology is money not spent on teaching, equipment or research that already works. The article itself notes that the main barrier is social rather than technical: if scientists lack the skills to use these tools, extra funding will not help.\nIn my opinion, the two positions can be combined. Governments should fund AI research alongside proven methods, and should attach clear conditions: shared data standards, training for researchers, and public results. Funding is worthwhile when it is designed so that the knowledge gained remains useful even if the original hope fails."
+ }
+}

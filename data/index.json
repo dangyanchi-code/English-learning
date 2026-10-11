@@ -1,0 +1,43 @@
+{
+ "site": {
+  "title": "外刊精读讲义库",
+  "title_en": "外刊精读",
+  "subtitle": "CET-6 Intensive Reading Library",
+  "note": "把《经济学人》等外刊原文做成六级精读讲义：六级标志词表 · 原文全文 · 精读练习 · 参考答案。每份讲义都按同一套版式生成，可直接打印。"
+ },
+ "modules": [
+  {
+   "id": "how-ai-can-revolutionise-science",
+   "slug": "how-ai-can-revolutionise-science",
+   "title": "How AI can revolutionise science",
+   "zh": "人工智能如何变革科学",
+   "source": "The Economist · Leaders",
+   "page": "p. 11",
+   "date": "2026-10-10",
+   "topic": "科技与科研",
+   "tags": [
+    "科技",
+    "人工智能",
+    "科研"
+   ],
+   "summary": "《经济学人》社论。AI 正在进入几乎所有科学领域，但采用程度差异极大——物理学与天文学论文中 7.2% 涉及 AI，兽医学只有 1.4%。文章把 AI 与显微镜、实验室、计算机相类比，认为真正的障碍不是技术而是社会性的：取决于科研人员是否愿意并且有能力使用这些工具。",
+   "sections": [
+    "词汇表：英文释义 + 原文出处，中文列留白自测",
+    "原文全文，两栏排版",
+    "PART 1 词汇：看释义写单词（10 题）",
+    "PART 2 选词填空：15 选 10",
+    "PART 3 阅读理解：5 题",
+    "PART 4 汉译英：段落翻译，含作答横线",
+    "PART 5 写作：150–200 词，含作答横线",
+    "参考答案（末页，含中文释义）"
+   ],
+   "pdf": "how-ai-can-revolutionise-science.pdf",
+   "pdfSize": "258 KB",
+   "counts": {
+    "words": 10,
+    "cloze": 10,
+    "quiz": 5
+   }
+  }
+ ]
+}
