@@ -119,27 +119,12 @@
   .vcard .reveal{margin-top:10px;font-size:12.5px;background:none;border:none;
     color:var(--accent);cursor:pointer;padding:0;font-family:inherit;text-decoration:underline}
 
-  /* quiz */
-  .q{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:18px 20px;
-    margin-bottom:14px;box-shadow:var(--shadow)}
-  .q .stem{font-size:15px;margin:0 0 12px;font-weight:600}
-  .q .opts{display:grid;gap:8px}
-  .opt{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--rule);
-    border-radius:7px;padding:9px 12px;cursor:pointer;font-size:14.5px;background:var(--card)}
-  .opt:hover{border-color:var(--accent)}
-  .opt input{margin:4px 0 0}
-  .opt.correct{border-color:var(--ok);background:var(--ok-soft)}
-  .opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
-  .opt .key{color:var(--muted);font-weight:600}
+  /* 选词填空 / 阅读理解的样式（.q .opt .bank）已随两个模块一起删除。 */
   .blank{width:104px;border:1px solid var(--rule);border-radius:6px;padding:3px 7px;
     font:inherit;font-size:14px;background:var(--card);text-align:center}
   .blank:focus{outline:2px solid var(--accent-soft);border-color:var(--accent)}
   .blank.correct{border-color:var(--ok);background:var(--ok-soft)}
   .blank.wrong{border-color:var(--bad);background:var(--bad-soft)}
-  .bank{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
-  .bank .w{border:1px solid var(--rule);border-radius:6px;padding:4px 10px;font-size:13.5px;
-    background:var(--card)}
-  .bank .w .l{color:var(--muted);margin-right:5px}
   .cloze{background:var(--card);border:1px solid var(--rule);border-radius:10px;
     padding:20px 22px;box-shadow:var(--shadow);font-family:var(--serif);font-size:15.5px;
     line-height:2.1;text-align:justify}
@@ -188,7 +173,7 @@
       <p class="lede">把《经济学人》等外刊原文做成六级精读讲义：六级标志词表 · 原文全文 · 精读练习 · 参考答案。每份讲义都按同一套版式生成，可直接打印。</p>
       <div class="stats">
         <div class="stat"><b>1</b><span>份讲义</span></div>
-        <div class="stat"><b>10</b><span>个六级标志词</span></div>
+        <div class="stat"><b>14</b><span>个六级标志词</span></div>
         <div class="stat"><b>3</b><span>个主题</span></div>
       </div>
     </header>
@@ -212,7 +197,7 @@
   <div id="view-module" hidden></div>
 </div>
 
-<script id="index-data" type="application/json">{"site": {"title": "外刊精读讲义库", "title_en": "外刊精读", "subtitle": "CET-6 Intensive Reading Library", "note": "把《经济学人》等外刊原文做成六级精读讲义：六级标志词表 · 原文全文 · 精读练习 · 参考答案。每份讲义都按同一套版式生成，可直接打印。"}, "modules": [{"id": "how-ai-can-revolutionise-science", "slug": "how-ai-can-revolutionise-science", "title": "How AI can revolutionise science", "zh": "人工智能如何变革科学", "source": "The Economist · Leaders", "page": "p. 11", "date": "2026-10-10", "topic": "科技与科研", "tags": ["科技", "人工智能", "科研"], "summary": "《经济学人》社论。AI 正在进入几乎所有科学领域，但采用程度差异极大——物理学与天文学论文中 7.2% 涉及 AI，兽医学只有 1.4%。文章把 AI 与显微镜、实验室、计算机相类比，认为真正的障碍不是技术而是社会性的：取决于科研人员是否愿意并且有能力使用这些工具。", "sections": ["词汇表：英文释义 + 原文出处，中文列留白自测", "原文全文，两栏排版", "PART 1 词汇：看释义写单词（10 题）", "PART 2 选词填空：15 选 10", "PART 3 阅读理解：5 题", "PART 4 汉译英：段落翻译，含作答横线", "PART 5 写作：150–200 词，含作答横线", "参考答案（末页，含中文释义）"], "pdf": "how-ai-can-revolutionise-science.pdf", "pdfSize": "258 KB", "counts": {"words": 10, "cloze": 10, "quiz": 5}}]}</script>
+<script id="index-data" type="application/json">{"site": {"title": "外刊精读讲义库", "title_en": "外刊精读", "subtitle": "CET-6 Intensive Reading Library", "note": "把《经济学人》等外刊原文做成六级精读讲义：六级标志词表 · 原文全文 · 精读练习 · 参考答案。每份讲义都按同一套版式生成，可直接打印。"}, "modules": [{"id": "how-ai-can-revolutionise-science", "slug": "how-ai-can-revolutionise-science", "title": "How AI can revolutionise science", "zh": "人工智能如何变革科学", "source": "The Economist · Leaders", "page": "p. 11", "date": "2026-10-11", "topic": "科技与科研", "tags": ["科技", "人工智能", "科研"], "summary": "《经济学人》社论。AI 正在进入几乎所有科学领域，但采用程度差异极大——物理学与天文学论文中 7.2% 涉及 AI，兽医学只有 1.4%。文章把 AI 与显微镜、实验室、计算机相类比，认为真正的障碍不是技术而是社会性的：取决于科研人员是否愿意并且有能力使用这些工具。", "sections": ["词汇表：英文释义 + 原文出处 + 中文，中文直接给出", "原文全文，两栏排版", "PART 1 词汇：看释义写单词（14 题）", "PART 2 汉译英：段落翻译，含作答横线", "PART 3 写作：150–200 词，含作答横线", "参考答案（末页）"], "pdf": "how-ai-can-revolutionise-science.pdf", "pdfSize": "251 KB", "counts": {"words": 14, "vocab": 14}, "words": 14}]}</script>
 <script>
 'use strict';
 var SITE_INDEX = JSON.parse(document.getElementById('index-data').textContent);
@@ -235,7 +220,7 @@ function setScore(id, part, got, total){
 function modSummary(id){
   var m = loadProgress()[id]; if(!m) return null;
   var got=0, tot=0, n=0;
-  ['vocab','cloze','quiz'].forEach(function(k){
+  ['vocab','trans','essay'].forEach(function(k){
     if(m[k]){ got+=m[k].got; tot+=m[k].total; n++; }});
   return n ? {got:got, tot:tot, parts:n} : null;
 }
@@ -296,8 +281,6 @@ function drawModule(meta, d){
     {k:'read',  name:'原文'},
     {k:'study', name:'背单词', badge:d.words.length},
     {k:'vocab', name:'词汇练习', badge:d.vocabQuiz.length},
-    {k:'cloze', name:'选词填空', badge:d.cloze.blankCount},
-    {k:'quiz',  name:'阅读理解', badge:d.quiz.length},
     {k:'trans', name:'汉译英'},
     {k:'essay', name:'写作'}
   ];
@@ -325,8 +308,6 @@ function showTab(k){
   if(k==='read')  p.innerHTML = tabRead(MOD);
   if(k==='study') p.innerHTML = tabStudy(MOD);
   if(k==='vocab') p.innerHTML = tabVocab(MOD);
-  if(k==='cloze'){ p.innerHTML = tabCloze(MOD); bindCloze(); }
-  if(k==='quiz'){ p.innerHTML = tabQuiz(MOD); bindQuiz(); }
   if(k==='trans') p.innerHTML = tabTrans(MOD);
   if(k==='essay') p.innerHTML = tabEssay(MOD);
   if(k==='study') bindStudy();
@@ -337,8 +318,6 @@ function showTab(k){
 /* ---------------- tabs ---------------- */
 function tabRead(d){
   return '<h3 class="sec">原文</h3>'
-    + (d.preQuestions.length ? '<div class="note"><b>读前思考：</b><ol style="margin:6px 0 0 20px">'
-        + d.preQuestions.map(function(q){return '<li>'+esc(q)+'</li>';}).join('') + '</ol></div>' : '')
     + '<div class="article">' + d.article.map(function(p){
         return '<p>' + esc(p) + '</p>'; }).join('') + '</div>';
 }
@@ -409,99 +388,11 @@ function bindVocab(){
   $('#v-show').addEventListener('click', function(){ grade(true); });
 }
 
-function tabCloze(d){
-  var c = d.cloze;
-  var body = c.parts.map(function(seg, i){
-    var out = '<span>' + esc(seg) + '</span>';
-    if(i < c.parts.length - 1){
-      out += ' <input class="blank" data-bi="' + i + '" autocomplete="off" spellcheck="false"'
-           + ' placeholder="' + (i+1) + '"> ';
-    }
-    return out;
-  }).join('');
-  return '<h3 class="sec">PART 2 选词填空</h3>'
-    + '<p class="note">' + esc(c.intro||'') + '</p>'
-    + '<div class="bank">' + c.options.map(function(o){
-        return '<span class="w"><span class="l">'+esc(o.letter)+'</span>'+esc(o.word)+'</span>';
-      }).join('') + '</div>'
-    + '<div class="cloze">' + body + '</div>'
-    + '<div class="scorebar"><span class="score" id="c-score">—</span>'
-    + '<div class="bar"><i id="c-bar"></i></div>'
-    + '<button class="btn primary" id="c-submit">提交</button>'
-    + '<button class="btn" id="c-show">显示答案</button></div>';
-}
-function bindCloze(){
-  var c = MOD.cloze, total = c.blankCount;
-  function grade(reveal){
-    var got = 0;
-    for(var n=1; n<=total; n++){
-      var inp = $('[data-bi="'+(n-1)+'"]'); if(!inp) continue;
-      var want = c.answers[String(n)];
-      var mine = (inp.value||'').trim().toLowerCase();
-      if(reveal){ inp.value = want; inp.classList.remove('wrong');
-        inp.classList.add('correct'); got++; continue; }
-      var ok = mine === want;
-      inp.classList.toggle('correct', ok);
-      inp.classList.toggle('wrong', !!mine && !ok);
-      if(ok) got++;
-    }
-    if(!reveal){
-      $('#c-score').innerHTML = got + ' / ' + total + ' 分';
-      $('#c-bar').style.width = (100*got/total) + '%';
-      setScore(MOD.id, 'cloze', got, total);
-    } else { $('#c-score').innerHTML = '<span class="small">已显示答案</span>'; }
-  }
-  $('#c-submit').addEventListener('click', function(){ grade(false); });
-  $('#c-show').addEventListener('click', function(){ grade(true); });
-}
-
-function tabQuiz(d){
-  return '<h3 class="sec">PART 3 阅读理解</h3>'
-    + '<p class="note">选出最佳答案，选完点「提交」。</p>'
-    + d.quiz.map(function(q,i){
-        return '<div class="q"><p class="stem">'+(i+1)+'. '+esc(q.stem)+'</p><div class="opts">'
-          + q.options.map(function(o){
-              var letter = o.trim()[0];
-              return '<label class="opt" data-q="'+i+'" data-l="'+letter+'">'
-                + '<input type="radio" name="q'+i+'" value="'+letter+'">'
-                + '<span>'+esc(o)+'</span></label>';}).join('')
-          + '</div></div>';}).join('')
-    + '<div class="scorebar"><span class="score" id="q-score">—</span>'
-    + '<div class="bar"><i id="q-bar"></i></div>'
-    + '<button class="btn primary" id="q-submit">提交</button>'
-    + '<button class="btn" id="q-show">显示答案</button></div>';
-}
-function bindQuiz(){
-  var d = MOD;
-  function grade(reveal){
-    var got = 0;
-    d.quiz.forEach(function(q,i){
-      $$('[data-q="'+i+'"]').forEach(function(lab){
-        var L = lab.dataset.l;
-        lab.classList.remove('correct','wrong');
-        if(L === q.answer) lab.classList.add('correct');
-        var chosen = $('input[name="q'+i+'"]:checked');
-        if(!reveal && chosen && chosen.value === L && L !== q.answer) lab.classList.add('wrong');
-      });
-      var chosen = $('input[name="q'+i+'"]:checked');
-      if(reveal){ $('input[name="q'+i+'"][value="'+q.answer+'"]').checked = true; got++; }
-      else if(chosen && chosen.value === q.answer) got++;
-    });
-    if(!reveal){
-      $('#q-score').innerHTML = got + ' / ' + d.quiz.length + ' 分';
-      $('#q-bar').style.width = (100*got/d.quiz.length) + '%';
-      var pass = got >= Math.ceil(d.quiz.length*0.6);
-      $('#q-score').innerHTML += ' <span class="verdict ' + (pass?'pass':'fail') + '">'
-        + (pass ? '达标' : '再读一遍原文') + '</span>';
-      setScore(MOD.id, 'quiz', got, d.quiz.length);
-    } else { $('#q-score').innerHTML = '<span class="small">已显示答案</span>'; }
-  }
-  $('#q-submit').addEventListener('click', function(){ grade(false); });
-  $('#q-show').addEventListener('click', function(){ grade(true); });
-}
+/* 选词填空 (tabCloze/bindCloze) 与 阅读理解 (tabQuiz/bindQuiz) 已按要求删除。
+   若要恢复，请先征得用户同意。 */
 
 function tabTrans(d){
-  return '<h3 class="sec">PART 4 汉译英</h3>'
+  return '<h3 class="sec">PART 2 汉译英</h3>'
     + '<p class="note">先把中文段落译成英文，写完后对照参考译文自查。</p>'
     + '<div class="cloze" style="font-family:var(--sans);font-size:15px">'
     + esc(d.translation.prompt) + '</div>'
@@ -513,7 +404,7 @@ function tabTrans(d){
     + '<div id="trans-model"></div>';
 }
 function tabEssay(d){
-  return '<h3 class="sec">PART 5 写作</h3>'
+  return '<h3 class="sec">PART 3 写作</h3>'
     + '<p class="note">' + esc(d.essay.prompt) + '</p>'
     + '<p class="note" style="margin:16px 0 8px">你的作文（直接在这里写，会自动保存）：</p>'
     + '<textarea rows="14" id="essay-in" placeholder="在这里写你的作文…"></textarea>'

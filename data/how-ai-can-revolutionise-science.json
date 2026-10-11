@@ -5,6 +5,51 @@
  "source": "The Economist | Leaders (p. 11)",
  "words": [
   {
+   "term": "panacea",
+   "ipa": "/ˌpænəˈsiːə/",
+   "pos": "n.",
+   "definition": "something believed to cure all problems at once",
+   "quote": "falsely hailed as panaceas",
+   "chinese": "万能药；灵丹妙药",
+   "forms": "panacea (n.) ｜ panaceas (pl.) ｜ 常与 hail as 连用"
+  },
+  {
+   "term": "antiquity",
+   "ipa": "/ænˈtɪkwəti/",
+   "pos": "n.",
+   "definition": "the distant past, especially ancient times",
+   "quote": "the received wisdom of antiquity",
+   "chinese": "古代；古时",
+   "forms": "antiquity (n.) ｜ ancient (adj.) ｜ antique (n./adj.)"
+  },
+  {
+   "term": "prodigious",
+   "ipa": "/prəˈdɪdʒəs/",
+   "pos": "adj.",
+   "definition": "surprisingly great in size, amount or degree",
+   "quote": "with prodigious benefit to all sorts of useful knowledge",
+   "chinese": "巨大的；惊人的",
+   "forms": "prodigious (adj.) ｜ prodigy (n.) ｜ prodigiously (adv.)"
+  },
+  {
+   "term": "polymath",
+   "ipa": "/ˈpɒlimæθ/",
+   "pos": "n.",
+   "definition": "a person with wide knowledge of many different subjects",
+   "quote": "Robert Hooke, an English polymath",
+   "chinese": "博学家；通才",
+   "forms": "polymath (n.) ｜ polyglot (n.) ｜ 同义: a Renaissance man"
+  },
+  {
+   "term": "turbocharge",
+   "ipa": "/ˈtɜːbəʊtʃɑːdʒ/",
+   "pos": "v.",
+   "definition": "to make something much faster or more powerful",
+   "quote": "AI can turbocharge scientific progress",
+   "chinese": "大幅加速；加力推动",
+   "forms": "turbocharge (v.) ｜ turbo (n.) ｜ 同义: supercharge"
+  },
+  {
    "term": "fret",
    "ipa": "/fret/",
    "pos": "v.",
@@ -32,13 +77,22 @@
    "forms": "laud (v.) ｜ laudable (adj.) ｜ laudatory (adj.)"
   },
   {
+   "term": "herald",
+   "ipa": "/ˈherəld/",
+   "pos": "n./v.",
+   "definition": "a sign that something is coming",
+   "quote": "lauded in the 1850s as a herald of world peace",
+   "chinese": "先兆；预示",
+   "forms": "herald (n./v.) ｜ heraldic (adj.) ｜ be heralded as"
+  },
+  {
    "term": "pundit",
    "ipa": "/ˈpʌndɪt/",
    "pos": "n.",
    "definition": "an expert who gives opinions in the media",
    "quote": "pundits in the 1990s said the internet would",
    "chinese": "专家；评论员",
-   "forms": "pundit (n.) ｜ punditry (n.) ｜ commentator (同义)"
+   "forms": "pundit (n.) ｜ punditry (n.) ｜ 同义: commentator"
   },
   {
    "term": "eradicate",
@@ -68,15 +122,6 @@
    "forms": "sift (v.) ｜ sift through ｜ sifter (n.)"
   },
   {
-   "term": "realm",
-   "ipa": "/relm/",
-   "pos": "n.",
-   "definition": "an area of activity, interest or knowledge",
-   "quote": "explore previously inaccessible realms",
-   "chinese": "领域；范围",
-   "forms": "realm (n.) ｜ the realm of ｜ sphere / domain (同义)"
-  },
-  {
    "term": "poised",
    "ipa": "/pɔɪzd/",
    "pos": "adj.",
@@ -84,15 +129,6 @@
    "quote": "is poised to do the same in the coming years",
    "chinese": "准备就绪的；蓄势待发的",
    "forms": "poised (adj.) ｜ be poised to do ｜ poise (n.)"
-  },
-  {
-   "term": "feasible",
-   "ipa": "/ˈfiːzəbl/",
-   "pos": "adj.",
-   "definition": "possible to do successfully",
-   "quote": "is therefore feasible",
-   "chinese": "可行的；行得通的",
-   "forms": "feasible (adj.) ｜ feasibility (n.) ｜ unfeasible (adj.)"
   }
  ],
  "article": [
@@ -108,11 +144,27 @@
   "Governments and funding bodies could help by pressing for greater use of common standards to allow AI systems to exchange and interpret laboratory results and other data. They could also fund more research into the integration of AI smarts with laboratory robotics, and into forms of AI beyond those being pursued in the private sector, which has bet nearly all its chips on language-based systems like ChatGPT. Less fashionable forms of AI, such as model-based machine learning, may be better suited to scientific tasks such as forming hypotheses.",
   "In 1665, during a period of rapid scientific progress, Robert Hooke, an English polymath, described the advent of new scientific instruments such as the microscope and telescope as “the adding of artificial organs to the natural”. They let researchers explore previously inaccessible realms and discover things in new ways, “with prodigious benefit to all sorts of useful knowledge”. For Hooke’s modern-day successors, the adding of artificial intelligence to the scientific toolkit is poised to do the same in the coming years—with similarly world-changing results."
  ],
- "preQuestions": [
-  "The article compares AI with earlier tools such as the microscope and the computer. Which earlier change do you think is the closest parallel, and why?",
-  "The author says the main barrier is \"sociological\" rather than technical. What would that look like in your own school or workplace?"
- ],
  "vocabQuiz": [
+  {
+   "definition": "something believed to cure all problems at once",
+   "answer": "panacea"
+  },
+  {
+   "definition": "the distant past, especially ancient times",
+   "answer": "antiquity"
+  },
+  {
+   "definition": "surprisingly great in size, amount or degree",
+   "answer": "prodigious"
+  },
+  {
+   "definition": "a person with wide knowledge of many different subjects",
+   "answer": "polymath"
+  },
+  {
+   "definition": "to make something much faster or more powerful",
+   "answer": "turbocharge"
+  },
   {
    "definition": "to worry continuously about something",
    "answer": "fret"
@@ -124,6 +176,10 @@
   {
    "definition": "to praise someone or something highly",
    "answer": "laud"
+  },
+  {
+   "definition": "a sign that something is coming",
+   "answer": "herald"
   },
   {
    "definition": "an expert who gives opinions in the media",
@@ -142,173 +198,26 @@
    "answer": "sift"
   },
   {
-   "definition": "an area of activity, interest or knowledge",
-   "answer": "realm"
-  },
-  {
    "definition": "ready and about to do something",
    "answer": "poised"
-  },
-  {
-   "definition": "possible to do successfully",
-   "answer": "feasible"
   }
  ],
  "vocabAnswers": {
-  "1": "fret",
-  "2": "thorny",
-  "3": "laud",
-  "4": "pundit",
-  "5": "eradicate",
-  "6": "mingle",
-  "7": "sift",
-  "8": "realm",
-  "9": "poised",
-  "10": "feasible"
+  "1": "panacea",
+  "2": "antiquity",
+  "3": "prodigious",
+  "4": "polymath",
+  "5": "turbocharge",
+  "6": "fret",
+  "7": "thorny",
+  "8": "laud",
+  "9": "herald",
+  "10": "pundit",
+  "11": "eradicate",
+  "12": "mingle",
+  "13": "sift",
+  "14": "poised"
  },
- "cloze": {
-  "intro": "Read the passage and choose one word for each blank from the box below. Each word may be used only once. There are five extra words.",
-  "options": [
-   {
-    "letter": "A",
-    "word": "eradicate"
-   },
-   {
-    "letter": "B",
-    "word": "eradication"
-   },
-   {
-    "letter": "C",
-    "word": "feasible"
-   },
-   {
-    "letter": "D",
-    "word": "feasibility"
-   },
-   {
-    "letter": "E",
-    "word": "fret"
-   },
-   {
-    "letter": "F",
-    "word": "fretful"
-   },
-   {
-    "letter": "G",
-    "word": "laud"
-   },
-   {
-    "letter": "H",
-    "word": "laudable"
-   },
-   {
-    "letter": "I",
-    "word": "mingle"
-   },
-   {
-    "letter": "J",
-    "word": "pundit"
-   },
-   {
-    "letter": "K",
-    "word": "poised"
-   },
-   {
-    "letter": "L",
-    "word": "realm"
-   },
-   {
-    "letter": "M",
-    "word": "sift"
-   },
-   {
-    "letter": "N",
-    "word": "thorny"
-   },
-   {
-    "letter": "O",
-    "word": "thorns"
-   }
-  ],
-  "blankCount": 10,
-  "parts": [
-   "Artificial intelligence is spreading through almost every branch of science. Supporters say it could speed up discovery, much as the microscope and the computer did in earlier centuries. Claims of that kind deserve close examination, since similar promises were made for the telegraph and the internet, and newspapers once ",
-   " every new machine as the answer to everything.\nThe article argues that today’s claims rest on a firmer historical foundation. What matters is that new tools change how research is done, not merely how quickly. The arrival of better instruments in the 17th century allowed ideas to travel further and faster; computers later made it possible to ",
-   " through huge quantities of data that no individual could ever read. Each development altered practice itself.\nTwo applications look especially promising. The first examines the existing literature to find connections that researchers have missed, and because it draws on several fields at once it opens up a ",
-   " that used to be closed to any single specialist. The second uses robots to form and test hypotheses, and because a machine can be switched on again and again, its experiments are easy to repeat and check.\nThe main obstacle is not technical. The idea is ",
-   " only if researchers are willing and able to use the tools, and many lack the training. In some fields specialists have neither the time nor the resources to test their own methods, and that is a ",
-   " problem to solve.\nCritics, however, are beginning to ",
-   " about the pace of change. The article notes that the degree of adoption still varies enormously: AI appears in 7.2% of physics and astronomy papers but only 1.4% of those in veterinary science. The author warns about one risk that has nothing to do with speed: algorithmic bias, in which a machine repeats the unfair assumptions built into its training data.\nIt would be easy to dismiss such concerns, but they deserve a serious answer. Bad decisions made cheaply can spread far, and no ",
-   " in the media has yet explained how to stop them. Yet the tools themselves are not the problem. What matters is whether different kinds of expertise can ",
-   " in the same laboratory, and whether governments will pay for work that crosses traditional boundaries in order to ",
-   " the worst abuses before they become routine. The technology is ",
-   " to change scientific practice; whether it improves it is a question for people, not machines."
-  ],
-  "answers": {
-   "1": "laud",
-   "2": "sift",
-   "3": "realm",
-   "4": "feasible",
-   "5": "thorny",
-   "6": "fret",
-   "7": "pundit",
-   "8": "mingle",
-   "9": "eradicate",
-   "10": "poised"
-  }
- },
- "quiz": [
-  {
-   "stem": "What does the article say about earlier technologies such as the electric telegraph and the internet?",
-   "options": [
-    "A. They were described as solutions to everything, but did not live up to it.",
-    "B. They were never expected to change society at all.",
-    "C. They reduced inequality more successfully than AI is likely to.",
-    "D. They were rejected by scientists at the time."
-   ],
-   "answer": "A"
-  },
-  {
-   "stem": "Why does the author treat the claims about AI more favourably than those earlier claims?",
-   "options": [
-    "A. AI is funded by governments rather than private firms.",
-    "B. AI has already replaced most laboratory work.",
-    "C. New tools have repeatedly led to periods of rapid scientific discovery.",
-    "D. Scientists now agree on what AI can achieve."
-   ],
-   "answer": "C"
-  },
-  {
-   "stem": "The figures 7.2% and 1.4% are used to show that:",
-   "options": [
-    "A. physics is a more valuable subject than veterinary science.",
-    "B. most scientific papers still contain no AI at all.",
-    "C. AI is mainly used for writing papers rather than doing research.",
-    "D. AI is used in science to very different degrees across fields."
-   ],
-   "answer": "D"
-  },
-  {
-   "stem": "According to the article, what is the main thing standing in the way of AI transforming science?",
-   "options": [
-    "A. The cost of laboratory robots.",
-    "B. Whether scientists are willing and able to use the tools.",
-    "C. The poor quality of language-based AI systems.",
-    "D. A lack of interest from private companies."
-   ],
-   "answer": "B"
-  },
-  {
-   "stem": "Why does the article mention Robert Hooke?",
-   "options": [
-    "A. To show that AI is only another laboratory instrument.",
-    "B. To argue that science has advanced little since the 17th century.",
-    "C. To prove that Hooke invented the microscope.",
-    "D. To suggest that AI may enlarge human capabilities much as early instruments did."
-   ],
-   "answer": "D"
-  }
- ],
  "translation": {
   "prompt": "人工智能正在被用于几乎每一个科学领域，但各学科的采用程度差异很大：在 2022 年发表的论文中，物理学和天文学有 7.2% 涉及人工智能，而兽医学只有 1.4%。支持者认为，这类工具能够大幅加快科学发现的速度，正如当年的显微镜、实验室和计算机一样。不过，主要的障碍并非技术性的，而是社会性的：只有当科研人员愿意并且有能力使用这些工具时，这种转变才可能真正发生。",
   "model": "Artificial intelligence is now being applied in almost every field of science, but the degree of adoption varies widely: of the papers published in 2022, 7.2% in physics and astronomy involved AI, compared with only 1.4% in veterinary science. Supporters argue that such tools can greatly accelerate the pace of scientific discovery, much as microscopes, laboratories and computers did in their day. The main barrier, however, is not technical but sociological: such a change can take place only if researchers are willing and able to use these tools."
